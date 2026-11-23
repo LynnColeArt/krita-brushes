@@ -4,7 +4,12 @@ Eleven brushes for painting and blending makeup on portraits. The ten applicatio
 
 ## Install and use
 
-Import [Makeup Atelier.bundle](<Makeup Atelier.bundle>) from **Settings → Manage Resource Libraries → Import**. Pick the **Makeup Atelier** tag in the Brush Presets docker, or search for `Makeup -`.
+1. Download [Makeup Atelier.bundle](Makeup%20Atelier.bundle?raw=1).
+2. In Krita, open **Settings → Manage Resource Libraries** and click **Import**.
+3. Select the downloaded `.bundle` file and click **Open**. If the file picker asks for a file type, choose **Resource Bundle**.
+4. In the **Brush Presets** docker, select the **Makeup Atelier** tag or search for `Makeup -`. If the docker is hidden, open it from **Settings → Dockers → Brush Presets**.
+
+Tested with Krita 5.3.4.1. [Krita resource bundle documentation](https://docs.krita.org/en/reference_manual/resource_management.html#importing-bundles)
 
 | Preset | Start here | Default size |
 | --- | --- | ---: |
@@ -30,10 +35,14 @@ Soft Focus Blender uses the Color Smudge engine in Dulling mode, with Color Rate
 
 The resource bundle packages eleven bitmap tips and eleven `.kpp` presets together so each preset can resolve its tip. [Krita Brush Presets](https://docs.krita.org/en/reference_manual/resource_management/paintoppresets.html) · [Resource Management](https://docs.krita.org/en/reference_manual/resource_management.html)
 
-[View the swatch sheet painted in Krita](swatches.png).
+![Swatches of all eleven brushes painted in Krita](swatches.png)
 
 ## Rebuild
 
 Run `python build_bundle.py` with Python 3.10+ and Pillow installed. The builder crops and normalizes the source scans, strips light paper tone, and writes the tips, presets, icons, and manifest into the bundle.
 
 The four source scans were made with the built-in ImageGen tool. The [generation prompts](sources/prompts.md) are included for reference.
+
+## License
+
+The brush pack, source files, and documentation are distributed under the [Apache License 2.0](LICENSE).
